@@ -1,0 +1,28 @@
+query name: life_expectancy
+    description: " Identifies the country that experienced the lengthiest continuous period of declining life expectancy, year after year"
+    docs:
+      show: true
+    columns:
+      - name: country
+        description: "The start year of the longest continuous decline period."
+      - name: current_year
+        description: "The year for the current life expectancy data."
+      - name: life_expectancy
+        description: "The number of years a person can expect to live"
+      - name: decline
+        description: "Identifies whether there is a decline in life expectancy in 
+                      a particular year for a specific country. If the life expectancy 
+                      in the current year is less than the life expectancy in the previous
+                      year for the same country, it is set to 1, indicating a decline. 
+                      Otherwise, it is set to 0, indicating no decline"
+      - name: grp
+        description: "Identifier that is assigned to consecutive rows with a decline
+                      in life expectancy within each country."
+      - name: rnumber
+        description: "Identifier that is assigned to consecutive years with a decline
+                      in life expectancy within each country. It serves the purpose of 
+                      identifying the lengthiest continuous period of year-over-year decline."
+      - name: start_year
+        description: "The year for the current life expectancy data."
+      - name: end_year
+        description: "The end year of the longest continuous decline period."
